@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PerformanceCategories from "@/components/PerformanceCategories";
+import Exclusives from "@/components/Exclusives";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
         {/* Social Proof / Brand Trust Ticker */}
         <PerformanceCategories />
+
+        {/* Staggered Exclusives Section */}
+        <Exclusives />
       </main>
     </div>
   );
