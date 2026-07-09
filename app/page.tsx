@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import PerformanceCategories from "@/components/PerformanceCategories";
 import Exclusives from "@/components/Exclusives";
 import PerformanceSystem from "@/components/PerformanceSystem";
+import DiagnosticPreview from "@/components/DiagnosticPreview";
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
 
         {/* Proprietary Performance System */}
         <PerformanceSystem />
+
+        {/* Interactive Diagnostic Preview */}
+        <DiagnosticPreview />
       </main>
     </div>
   );
