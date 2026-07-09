@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PerformanceCategories from "@/components/PerformanceCategories";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
       <main className="flex flex-col min-h-screen w-full">
         {/* Dark Hero Section */}
         <Hero />
+
+        {/* Social Proof / Brand Trust Ticker */}
+        <PerformanceCategories />
       </main>
     </div>
   );
