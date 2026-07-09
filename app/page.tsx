@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PerformanceCategories from "@/components/PerformanceCategories";
 import Exclusives from "@/components/Exclusives";
+import PerformanceSystem from "@/components/PerformanceSystem";
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
 
         {/* Staggered Exclusives Section */}
         <Exclusives />
+
+        {/* Proprietary Performance System */}
+        <PerformanceSystem />
       </main>
     </div>
   );
