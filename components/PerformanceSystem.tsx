@@ -60,7 +60,7 @@ export default function PerformanceSystem() {
   return (
     <section
       id="system"
-      className="py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
+      className="py-20 md:py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}

@@ -14,7 +14,7 @@ function FaqItem({ question, answer, isOpen, onToggle }: FaqItemProps) {
     <div className="border-b border-obsidian/10 pb-6 group">
       <button
         onClick={onToggle}
-        className="w-full flex justify-between items-center text-left py-2 focus:outline-none transition-colors duration-200 cursor-pointer"
+        className="w-full flex justify-between items-center text-left py-4 focus:outline-none transition-colors duration-200 cursor-pointer"
       >
         <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian pr-4">
           {question}
@@ -67,7 +67,7 @@ export default function Faq() {
   return (
     <section
       id="faq"
-      className="py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
+      className="py-20 md:py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">

@@ -11,7 +11,7 @@ export default function Hero() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full my-auto pt-44 pb-12 flex flex-col items-start space-y-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full my-auto pt-32 pb-8 md:pt-44 md:pb-12 flex flex-col items-start space-y-12">
         <div className="space-y-4 max-w-5xl">
           {/* Tiny Brand Tagline */}
           <div className="flex items-center space-x-3 text-white">
@@ -48,7 +48,7 @@ export default function Hero() {
 
       {/* Sticky Coordinate Stats (Hero Footer) */}
       <div className="relative z-10 w-full border-t border-white/[0.05] bg-obsidian/90 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-xs text-mutedGray">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-xs text-mutedGray">
           <div className="space-y-1">
             <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
               01 / STRENGTH PROTOCOLS

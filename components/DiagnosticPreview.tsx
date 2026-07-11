@@ -16,7 +16,7 @@ export default function DiagnosticPreview() {
   ];
 
   return (
-    <section id="diagnostic" className="py-32 bg-obsidian border-b border-white/[0.05] relative">
+    <section id="diagnostic" className="py-20 md:py-32 bg-obsidian border-b border-white/[0.05] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
@@ -48,23 +48,23 @@ export default function DiagnosticPreview() {
           </div>
 
           {/* Right Interactive Portal Component */}
-          <div className="lg:col-span-7 bg-[#141416] border border-white/[0.05] p-6 sm:p-12 shadow-2xl relative">
+          <div className="lg:col-span-7 bg-[#141416] border border-white/[0.05] p-6 sm:p-12 shadow-2xl relative overflow-hidden">
             
             {/* App Interface Top Window Decor */}
-            <div className="flex items-center justify-between border-b border-white/[0.05] pb-6 mb-8">
-              <div className="flex items-center space-x-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-white/20" aria-hidden="true" />
-                <span className="text-[11px] font-mono text-mutedGray tracking-wider uppercase">
-                  ARDEN // Biological Interface v1.08
+            <div className="flex items-center justify-between border-b border-white/[0.05] pb-6 mb-8 flex-wrap gap-4">
+              <div className="flex items-center space-x-2 min-w-0">
+                <div className="w-2.5 h-2.5 rounded-full bg-white/20 flex-shrink-0" aria-hidden="true" />
+                <span className="text-[10px] sm:text-[11px] font-mono text-mutedGray tracking-wider uppercase truncate">
+                  ARDEN <span className="hidden sm:inline">// Biological Interface v1.08</span><span className="inline sm:hidden">// Interface</span>
                 </span>
               </div>
-              <span className="text-[10px] font-mono text-white uppercase tracking-widest">
+              <span className="text-[9px] sm:text-[10px] font-mono text-white uppercase tracking-widest flex-shrink-0">
                 Active State
               </span>
             </div>
 
             {/* Tab Buttons */}
-            <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none gap-2 mb-8 -mx-6 px-6 md:mx-0 md:px-0" role="tablist">
+            <div className="flex flex-wrap gap-2 mb-8" role="tablist">
               {tabs.map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (
@@ -73,7 +73,7 @@ export default function DiagnosticPreview() {
                     onClick={() => setActiveTab(tab.id)}
                     role="tab"
                     aria-selected={isActive}
-                    className={`flex-shrink-0 px-4 py-2 border text-[10px] uppercase tracking-[0.2em] font-mono focus:outline-none transition-colors duration-200 cursor-pointer ${
+                    className={`flex-shrink-0 px-4 py-2.5 border text-[10px] uppercase tracking-[0.2em] font-mono focus:outline-none transition-colors duration-200 cursor-pointer ${
                       isActive
                         ? 'border-white text-white'
                         : 'border-white/5 text-mutedGray hover:border-white/10 hover:text-warmWhite'
@@ -106,7 +106,7 @@ export default function DiagnosticPreview() {
                   
                   {/* Glucose Stability Wave Visual */}
                   <div className="border border-white/[0.04] p-4 bg-[#0A0A0B]/50 space-y-4">
-                    <div className="flex justify-between items-center text-[10px] font-mono text-mutedGray">
+                    <div className="flex justify-between items-center text-[10px] font-mono text-mutedGray flex-wrap gap-2">
                       <span>Glucose Stability Wave</span>
                       <span>Target Range: 75-110 mg/dL</span>
                     </div>
@@ -142,7 +142,7 @@ export default function DiagnosticPreview() {
                   
                   {/* Sleep metric progress bar */}
                   <div className="border border-white/[0.04] p-4 bg-[#0A0A0B]/50 space-y-2">
-                    <div className="flex justify-between items-center text-[10px] font-mono text-mutedGray">
+                    <div className="flex justify-between items-center text-[10px] font-mono text-mutedGray flex-wrap gap-2">
                       <span>Circadian Light Target Progress</span>
                       <span>9,200 Lux achieved</span>
                     </div>
@@ -199,7 +199,7 @@ export default function DiagnosticPreview() {
                     Eliminate chronic desk-related postural damage and maximize leverage.
                   </p>
                   
-                  <div className="border border-white/[0.04] p-4 bg-[#0A0A0B]/50 flex justify-between items-center text-xs">
+                  <div className="border border-white/[0.04] p-4 bg-[#0A0A0B]/50 flex justify-between items-center text-xs flex-wrap gap-2">
                     <span className="font-mono text-mutedGray text-[10px]">Thoracic Rotation Index</span>
                     <span className="text-white uppercase font-mono text-[10px]">15° Expansion Protocol</span>
                   </div>

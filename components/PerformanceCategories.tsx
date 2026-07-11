@@ -15,22 +15,22 @@ export default function PerformanceCategories() {
             <span className="text-obsidian hover:opacity-75 transition-opacity duration-200 cursor-pointer">
               STUDIO CYCLING
             </span>
-            <span className="text-obsidian/20 font-light" aria-hidden="true">•</span>
+            <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
             
             <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
               HIGH-ALTITUDE RUNNING
             </span>
-            <span className="text-obsidian/20 font-light" aria-hidden="true">•</span>
+            <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
             
             <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
               PILATES ARCHITECTURE
             </span>
-            <span className="text-obsidian/20 font-light" aria-hidden="true">•</span>
+            <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
             
             <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
               ATHLETIC ENDURANCE
             </span>
-            <span className="text-obsidian/20 font-light" aria-hidden="true">•</span>
+            <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
             
             <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
               THERAPEUTIC RECOVERY

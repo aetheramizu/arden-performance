@@ -25,13 +25,13 @@ export default function Intake() {
   };
 
   return (
-    <section id="apply" className="py-32 bg-obsidian">
+    <section id="apply" className="py-20 md:py-32 bg-obsidian">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Left Side: Editorial Banner Frame */}
           <div className="lg:col-span-5 relative group">
-            <div className="relative aspect-[4/5] bg-zinc-900 overflow-hidden shadow-2xl">
+            <div className="relative aspect-[16/10] lg:aspect-[4/5] bg-zinc-900 overflow-hidden shadow-2xl">
               <img
                 src="/images/intake-consult.jpg"
                 alt="Curated wellness clinic interior for direct physiological consultation"

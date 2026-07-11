@@ -16,7 +16,7 @@ export default function Header() {
         </Link>
 
         {/* Editorial Nav Links */}
-        <nav className="hidden md:flex items-center space-x-12" aria-label="Main Navigation">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-12" aria-label="Main Navigation">
           <Link
             href="#exclusives"
             className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex items-center space-x-6">
           <Link
             href="#apply"
-            className="relative group overflow-hidden px-5 py-2.5 border border-white/25 text-[10px] uppercase tracking-[0.2em] text-warmWhite rounded-none transition-colors duration-300 hover:border-warmWhite hover:bg-white/[0.05]"
+            className="relative group overflow-hidden px-6 py-3 md:px-5 md:py-2.5 border border-white/25 text-[10px] uppercase tracking-[0.2em] text-warmWhite rounded-none transition-colors duration-300 hover:border-warmWhite hover:bg-white/[0.05]"
           >
             <span className="relative z-10">Request Membership</span>
           </Link>

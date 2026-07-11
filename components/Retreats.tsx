@@ -2,7 +2,7 @@ export default function Retreats() {
   return (
     <section
       id="retreats"
-      className="py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
+      className="py-20 md:py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">

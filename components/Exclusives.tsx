@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Exclusives() {
   return (
-    <section id="exclusives" className="py-32 bg-obsidian border-b border-white/[0.05]">
+    <section id="exclusives" className="py-20 md:py-32 bg-obsidian border-b border-white/[0.05]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="mb-20">
