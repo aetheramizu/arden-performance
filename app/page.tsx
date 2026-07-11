@@ -6,6 +6,8 @@ import PerformanceSystem from "@/components/PerformanceSystem";
 import DiagnosticPreview from "@/components/DiagnosticPreview";
 import Retreats from "@/components/Retreats";
 import Intake from "@/components/Intake";
+import Faq from "@/components/Faq";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -38,6 +40,12 @@ export default function Home() {
 
         {/* Membership Intake Form */}
         <Intake />
+
+        {/* Frequently Asked Questions */}
+        <Faq />
+
+        {/* Architectural Lookbook Footer */}
+        <Footer />
       </main>
     </div>
   );
