@@ -4,6 +4,7 @@ import PerformanceCategories from "@/components/PerformanceCategories";
 import Exclusives from "@/components/Exclusives";
 import PerformanceSystem from "@/components/PerformanceSystem";
 import DiagnosticPreview from "@/components/DiagnosticPreview";
+import Retreats from "@/components/Retreats";
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
 
         {/* Interactive Diagnostic Preview */}
         <DiagnosticPreview />
+
+        {/* Arden House Retreats Section */}
+        <Retreats />
       </main>
     </div>
   );
