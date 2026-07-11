@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="py-24 bg-[#0A0A0B] text-warmWhite border-t border-white/[0.04]">
+    <footer className="py-24 bg-obsidian text-warmWhite border-t border-white/[0.05]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom legal coordinate bar */}
-        <div className="pt-8 border-t border-white/[0.04] flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-mutedGray font-mono">
+        <div className="pt-8 border-t border-white/[0.05] flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-mutedGray font-mono">
           <span>&copy; {new Date().getFullYear()} ARDEN SYSTEMS INC. ALL CLINICAL RIGHTS CALIBRATED.</span>
           <div className="flex space-x-6">
             <Link href="#" className="hover:text-white transition-colors duration-200">

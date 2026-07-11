@@ -24,7 +24,7 @@ function SystemCard({ num, title, description, imageSrc, imageAlt }: SystemCardP
         <h3 className="font-sans text-lg font-bold uppercase tracking-wider text-obsidian">
           {num} / {title}
         </h3>
-        <p className="text-xs text-[#5E5E62] font-light leading-relaxed">
+        <p className="text-xs text-slateMuted font-light leading-relaxed">
           {description}
         </p>
       </div>
@@ -66,15 +66,15 @@ export default function PerformanceSystem() {
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
           <div className="lg:col-span-5">
-            <span className="text-xs uppercase tracking-[0.3em] text-obsidian/45 block mb-4 font-bold">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 block mb-4 font-bold">
               Precision Analytics
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-normal text-obsidian leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
               The ARDEN <br />Performance Ecosystem
             </h2>
           </div>
           <div className="lg:col-span-7">
-            <p className="text-[#2E2E30] font-light text-sm md:text-base leading-relaxed max-w-xl">
+            <p className="text-slateDark font-light text-sm md:text-base leading-relaxed max-w-xl">
               By integrating dynamic physiological trackers with clinical biomarkers and bespoke nutrition
               schedules, ARDEN constructs an optimized, continuous feedback loop for your daily routine.
             </p>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/[0.04] transition-colors duration-300"
+      className="fixed top-0 left-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/[0.05] transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Brand Mark */}

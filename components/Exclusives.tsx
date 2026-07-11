@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 export default function Exclusives() {
   return (
-    <section id="exclusives" className="py-32 bg-[#0A0A0B] border-b border-white/[0.04]">
+    <section id="exclusives" className="py-32 bg-obsidian border-b border-white/[0.05]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="mb-20">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-semibold mb-4">
+          <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-bold mb-4">
             Unmatched Offerings
           </span>
-          <h2 className="font-serif text-4xl md:text-6xl font-normal text-warmWhite">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
             New ARDEN Exclusives
           </h2>
         </div>
@@ -44,7 +44,7 @@ export default function Exclusives() {
               <div className="pt-2">
                 <Link
                   href="#apply"
-                  className="text-xs uppercase tracking-[0.15em] font-semibold border-b border-obsidian pb-1 hover:text-black hover:border-black transition-colors duration-200"
+                  className="text-xs uppercase tracking-[0.2em] font-semibold border-b border-obsidian pb-1 hover:text-black hover:border-black transition-colors duration-200"
                 >
                   Request Access &rarr;
                 </Link>
@@ -53,7 +53,7 @@ export default function Exclusives() {
           </div>
 
           {/* Right Column: Portrait Card and Text Block */}
-          <div className="lg:col-span-5 space-y-12 lg:pl-12">
+          <div className="lg:col-span-5 space-y-6 md:space-y-8 lg:pl-12">
             {/* Portrait Image Wrapper */}
             <div className="aspect-[4/5] bg-zinc-900 overflow-hidden relative shadow-xl">
               <img
@@ -66,9 +66,12 @@ export default function Exclusives() {
 
             {/* Content Details */}
             <div className="space-y-4">
-              <h4 className="text-lg uppercase tracking-wider font-bold text-warmWhite">
+              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 block">
+                Private Calibration
+              </span>
+              <h3 className="font-serif text-xl md:text-2xl font-normal uppercase tracking-wide leading-tight text-warmWhite">
                 Unlimited Signature Sessions
-              </h4>
+              </h3>
               <p className="text-xs text-mutedGray font-light leading-relaxed">
                 Every program is calibrated dynamically. Enjoy private studio environments engineered for
                 uninterrupted, clinical-grade neurological and physical testing.

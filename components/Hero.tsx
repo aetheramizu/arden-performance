@@ -47,28 +47,28 @@ export default function Hero() {
       </div>
 
       {/* Sticky Coordinate Stats (Hero Footer) */}
-      <div className="relative z-10 w-full border-t border-white/[0.08] bg-obsidian/90 backdrop-blur-sm">
+      <div className="relative z-10 w-full border-t border-white/[0.05] bg-obsidian/90 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-xs text-mutedGray">
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-widest">
+            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
               01 / STRENGTH PROTOCOLS
             </span>
             <p className="font-light text-mutedGray">Skeletal integrity & dense resistance.</p>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-widest">
+            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
               02 / METABOLIC SYSTEMS
             </span>
             <p className="font-light text-mutedGray">Sub-cellular glycemic tracking.</p>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-widest">
+            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
               03 / CIRCADIAN BLUEPRINTS
             </span>
             <p className="font-light text-mutedGray">Optimized deep autonomic sleep.</p>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-widest">
+            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
               04 / THE PHYSICAL CHAMBERS
             </span>
             <p className="font-light text-mutedGray">Sensory decompression retreats.</p>

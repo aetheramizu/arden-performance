@@ -39,7 +39,7 @@ export default function Intake() {
                 loading="lazy"
               />
               {/* Dark text-overlay card matching reference theme */}
-              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent p-10 flex flex-col justify-end space-y-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent p-6 sm:p-10 flex flex-col justify-end space-y-4">
                 <h3 className="font-serif text-3xl md:text-4xl font-normal uppercase tracking-tight text-warmWhite leading-tight">
                   ONE MEMBERSHIP.<br />
                   LIMITLESS POTENTIAL.
@@ -53,16 +53,16 @@ export default function Intake() {
           </div>
 
           {/* Right Side: Clean White Interactive Form Console */}
-          <div className="lg:col-span-7 bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.05] space-y-10">
+          <div className="lg:col-span-7 bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.06] space-y-10">
             
             <div className="space-y-4">
-              <span className="text-xs uppercase tracking-[0.3em] text-black/50 font-bold">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
                 Intake Console
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-normal text-obsidian">
                 Apply For Private Assessment
               </h2>
-              <p className="text-xs text-[#5E5E62] font-light max-w-xl">
+              <p className="text-xs text-slateMuted font-light max-w-xl">
                 All applications are manually audited for clinical availability. Please state your baseline
                 coordinates below to schedule an onboarding consultation.
               </p>
@@ -159,7 +159,7 @@ export default function Intake() {
                 <div className="pt-6">
                   <button
                     type="submit"
-                    className="w-full bg-obsidian text-warmWhite text-xs uppercase tracking-[0.25em] font-bold py-4 px-8 hover:bg-black hover:text-white transition-colors duration-300 block text-center cursor-pointer"
+                    className="w-full bg-obsidian text-warmWhite text-xs uppercase tracking-[0.25em] font-bold py-4 px-10 hover:bg-black hover:text-white transition-colors duration-300 block text-center cursor-pointer"
                   >
                     Submit Private Application
                   </button>
@@ -167,10 +167,10 @@ export default function Intake() {
               </form>
             ) : (
               /* Elegant Success Indicator */
-              <div id="modal-success" className="p-8 border border-black/40 bg-white text-left space-y-4 animate-fadeIn">
-                <div className="flex items-center space-x-3 text-black">
-                  <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div id="modal-success" className="p-8 border border-obsidian/30 bg-white text-left space-y-4 animate-fadeIn">
+                <div className="flex items-center space-x-3 text-obsidian">
+                  <svg className="w-4 h-4 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                   <span className="text-xs uppercase tracking-[0.25em] font-bold">
                     Application Transmitted Safely
@@ -179,13 +179,13 @@ export default function Intake() {
                 <h3 className="font-serif text-2xl text-obsidian font-normal">
                   Your assessment protocol is active.
                 </h3>
-                <p className="text-xs text-[#5E5E62] font-light leading-relaxed">
+                <p className="text-xs text-slateMuted font-light leading-relaxed">
                   Our Performance Registrar will coordinate a secure digital intake request via your direct
                   parameters within 24 operational hours.
                 </p>
                 <button
                   onClick={handleReset}
-                  className="text-xs uppercase tracking-[0.15em] text-black border-b border-black pb-0.5 mt-2 font-bold cursor-pointer"
+                  className="text-xs uppercase tracking-[0.2em] font-semibold text-obsidian border-b border-obsidian pb-1 hover:text-slateMuted hover:border-slateMuted transition-colors duration-200 mt-2 cursor-pointer"
                 >
                   Submit Another Request
                 </button>

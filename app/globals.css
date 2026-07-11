@@ -7,9 +7,20 @@
   --color-slateBorder: #222224;
   --color-mutedGray: #8E8E93;
   --color-softGray: #E5E5E7;
+  --color-slateMuted: #5E5E62;
+  --color-slateDark: #2E2E30;
 
   --font-serif: var(--font-cormorant), serif;
   --font-sans: var(--font-plus-jakarta), sans-serif;
+}
+
+/* Utility to hide scrollbars for horizontal swiping containers */
+@utility scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
 /* Custom Fine-Grain Texture Overlay for Lookbook Feel */

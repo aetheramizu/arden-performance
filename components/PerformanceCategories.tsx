@@ -4,7 +4,7 @@ export default function PerformanceCategories() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-baseline">
         {/* Left Column: Section Title */}
         <div className="lg:col-span-4">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-obsidian font-bold">
+          <h2 className="text-[11px] uppercase tracking-[0.3em] text-obsidian font-bold">
             Performance Categories
           </h2>
         </div>

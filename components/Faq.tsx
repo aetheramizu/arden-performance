@@ -34,7 +34,7 @@ function FaqItem({ question, answer, isOpen, onToggle }: FaqItemProps) {
           isOpen ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-xs text-[#5E5E62] font-light leading-relaxed max-w-2xl">
+        <p className="text-xs text-slateMuted font-light leading-relaxed max-w-2xl">
           {answer}
         </p>
       </div>
@@ -74,13 +74,13 @@ export default function Faq() {
           
           {/* Left Side Typography Summary */}
           <div className="lg:col-span-4 space-y-4">
-            <span className="text-xs uppercase tracking-[0.3em] text-black/50 font-bold font-sans">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
               Support Console
             </span>
-            <h2 className="font-serif text-3xl md:text-5xl font-normal text-obsidian leading-tight">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
               Frequently Asked Questions
             </h2>
-            <p className="text-xs text-[#5E5E62] font-light leading-relaxed max-w-sm">
+            <p className="text-xs text-slateMuted font-light leading-relaxed max-w-sm">
               Curious about clinical onboarding or membership protocols? Find quick details below. For direct
               coordination, contact our support registrar.
             </p>
