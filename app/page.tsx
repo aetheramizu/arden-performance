@@ -5,6 +5,7 @@ import Exclusives from "@/components/Exclusives";
 import PerformanceSystem from "@/components/PerformanceSystem";
 import DiagnosticPreview from "@/components/DiagnosticPreview";
 import Retreats from "@/components/Retreats";
+import Intake from "@/components/Intake";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Arden House Retreats Section */}
         <Retreats />
+
+        {/* Membership Intake Form */}
+        <Intake />
       </main>
     </div>
   );
