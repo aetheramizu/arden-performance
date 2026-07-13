@@ -14,8 +14,11 @@ export default function VideoBackground({ videoSrc, posterSrc }: VideoBackground
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-    setIsMobile(window.innerWidth < 768);
+    const timer = setTimeout(() => {
+      setIsMounted(true);
+      setIsMobile(window.innerWidth < 768);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {

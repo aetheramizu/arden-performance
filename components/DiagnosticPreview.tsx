@@ -87,7 +87,7 @@ export default function DiagnosticPreview() {
               <div className="flex items-center space-x-2 min-w-0">
                 <div className="w-2.5 h-2.5 rounded-full bg-white/20 flex-shrink-0" aria-hidden="true" />
                 <span className="text-[10px] sm:text-[11px] font-mono text-mutedGray tracking-wider uppercase truncate">
-                  ARDEN <span className="hidden sm:inline">// Biological Interface v1.08</span><span className="inline sm:hidden">// Interface</span>
+                  ARDEN <span className="hidden sm:inline">{"// Biological Interface v1.08"}</span><span className="inline sm:hidden">{"// Interface"}</span>
                 </span>
               </div>
               <span className="text-[9px] sm:text-[10px] font-mono text-white uppercase tracking-widest flex-shrink-0">

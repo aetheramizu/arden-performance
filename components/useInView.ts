@@ -26,8 +26,10 @@ export function useInView({
     // Respect prefers-reduced-motion
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReduced) {
-      setIsInView(true);
-      return;
+      const timer = setTimeout(() => {
+        setIsInView(true);
+      }, 0);
+      return () => clearTimeout(timer);
     }
 
     const observer = new IntersectionObserver(
