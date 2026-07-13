@@ -16,6 +16,30 @@ export default function DiagnosticPreview() {
     { id: 'musculoskeletal' as TabId, label: 'Biomechanical' },
   ];
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    const currentIndex = tabs.findIndex(tab => tab.id === activeTab);
+    let newIndex = currentIndex;
+
+    if (e.key === 'ArrowRight') {
+      newIndex = (currentIndex + 1) % tabs.length;
+    } else if (e.key === 'ArrowLeft') {
+      newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    } else {
+      return;
+    }
+
+    e.preventDefault();
+    const nextTabId = tabs[newIndex].id;
+    setActiveTab(nextTabId);
+
+    // Shift keyboard focus programmatically
+    const container = e.currentTarget;
+    const buttons = container.querySelectorAll('button[role="tab"]');
+    if (buttons[newIndex]) {
+      (buttons[newIndex] as HTMLButtonElement).focus();
+    }
+  };
+
   return (
     <section id="diagnostic" className="py-20 md:py-32 bg-obsidian border-b border-white/[0.05] relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -24,7 +48,7 @@ export default function DiagnosticPreview() {
           {/* Left Narrative Space */}
           <div className="lg:col-span-5 space-y-6">
             <Reveal delay={0} direction="up" distance={20}>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 font-bold">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-bold mb-4">
                 Biological Interface
               </span>
             </Reveal>
@@ -72,15 +96,23 @@ export default function DiagnosticPreview() {
             </div>
 
             {/* Tab Buttons */}
-            <div className="flex flex-wrap gap-2 mb-8" role="tablist">
+            <div 
+              className="flex flex-wrap gap-2 mb-8" 
+              role="tablist"
+              aria-label="Biological metrics selection"
+              onKeyDown={handleKeyDown}
+            >
               {tabs.map((tab) => {
                 const isActive = activeTab === tab.id;
                 return (
                   <button
                     key={tab.id}
+                    id={`tab-${tab.id}`}
                     onClick={() => setActiveTab(tab.id)}
                     role="tab"
                     aria-selected={isActive}
+                    aria-controls={`panel-${tab.id}`}
+                    tabIndex={isActive ? 0 : -1}
                     className={`flex-shrink-0 px-4 py-2.5 border text-[10px] uppercase tracking-[0.2em] font-mono focus:outline-none transition-colors duration-200 cursor-pointer ${
                       isActive
                         ? 'border-white text-white'
@@ -94,7 +126,13 @@ export default function DiagnosticPreview() {
             </div>
 
             {/* Dynamic Content Panel */}
-            <div className="space-y-8 min-h-[300px]">
+            <div 
+              id={`panel-${activeTab}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${activeTab}`}
+              tabIndex={0}
+              className="space-y-8 min-h-[300px] focus:outline-none focus-visible:ring-1 focus-visible:ring-white/20"
+            >
               
               {/* TAB: METABOLIC */}
               {activeTab === 'metabolic' && (

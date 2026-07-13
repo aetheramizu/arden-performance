@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
 
       {/* Main Content */}
-      <main className="flex flex-col min-h-screen w-full">
+      <main id="main-content" className="flex flex-col min-h-screen w-full">
         {/* Dark Hero Section */}
         <Hero />
 

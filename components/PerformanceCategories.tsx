@@ -13,34 +13,37 @@ export default function PerformanceCategories() {
           </Reveal>
         </div>
 
-        {/* Right Column: Categories Ticker */}
+        {/* Right Column: Categories List */}
         <div className="lg:col-span-8">
           <Reveal delay={150} direction="up" distance={20}>
-            <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs md:text-sm uppercase tracking-[0.25em] text-[#2E2E30] font-semibold">
-              <span className="text-obsidian hover:opacity-75 transition-opacity duration-200 cursor-pointer">
+            <ul 
+              className="flex flex-wrap gap-x-8 gap-y-4 text-xs md:text-sm uppercase tracking-[0.25em] text-[#2E2E30] font-semibold"
+              aria-label="Available performance categories"
+            >
+              <li className="text-obsidian transition-opacity duration-200">
                 STUDIO CYCLING
-              </span>
-              <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
+              </li>
+              <li className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</li>
               
-              <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
+              <li className="text-[#2E2E30] transition-colors duration-200">
                 HIGH-ALTITUDE RUNNING
-              </span>
-              <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
+              </li>
+              <li className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</li>
               
-              <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
+              <li className="text-[#2E2E30] transition-colors duration-200">
                 PILATES ARCHITECTURE
-              </span>
-              <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
+              </li>
+              <li className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</li>
               
-              <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
+              <li className="text-[#2E2E30] transition-colors duration-200">
                 ATHLETIC ENDURANCE
-              </span>
-              <span className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</span>
+              </li>
+              <li className="hidden sm:inline text-obsidian/20 font-light" aria-hidden="true">•</li>
               
-              <span className="hover:text-obsidian transition-colors duration-200 cursor-pointer">
+              <li className="text-[#2E2E30] transition-colors duration-200">
                 THERAPEUTIC RECOVERY
-              </span>
-            </div>
+              </li>
+            </ul>
           </Reveal>
         </div>
       </div>

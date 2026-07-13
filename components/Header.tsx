@@ -23,6 +23,13 @@ export default function Header() {
           : 'bg-obsidian/60 border-white/[0.03]'
       }`}
     >
+      {/* Skip to Main Content Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-obsidian focus:text-warmWhite focus:px-6 focus:py-3 focus:border focus:border-white/20 focus:outline-none"
+      >
+        Skip to main content
+      </a>
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Brand Mark */}
         <Link

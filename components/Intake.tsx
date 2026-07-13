@@ -55,7 +55,11 @@ export default function Intake() {
 
           {/* Right Side: Clean White Interactive Form Console */}
           <Reveal className="lg:col-span-7" delay={200} direction="up" distance={30} duration={800}>
-            <div className="bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.06] space-y-10">
+            <div 
+              role="status" 
+              aria-live="polite" 
+              className="bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.06] space-y-10"
+            >
             
             <div className="space-y-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">

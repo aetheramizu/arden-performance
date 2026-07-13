@@ -8,29 +8,40 @@ interface FaqItemProps {
   answer: string;
   isOpen: boolean;
   onToggle: () => void;
+  index: number;
 }
 
-function FaqItem({ question, answer, isOpen, onToggle }: FaqItemProps) {
+function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
   return (
     <div className="border-b border-obsidian/10 pb-6 group">
-      <button
-        onClick={onToggle}
-        className="w-full flex justify-between items-center text-left py-4 focus:outline-none transition-colors duration-200 cursor-pointer"
-      >
-        <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian pr-4">
-          {question}
-        </span>
-        <span
-          className={`text-lg font-light text-obsidian/60 transform transition-transform duration-300 flex-shrink-0 ${
-            isOpen ? 'rotate-45' : 'rotate-0'
-          }`}
+      <h3>
+        <button
+          id={`faq-btn-${index}`}
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          aria-controls={`faq-panel-${index}`}
+          className="w-full flex justify-between items-center text-left py-4 focus:outline-none transition-colors duration-200 cursor-pointer"
         >
-          +
-        </span>
-      </button>
+          <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-wider text-obsidian pr-4">
+            {question}
+          </span>
+          <span
+            className={`text-lg font-light text-obsidian/60 transform transition-transform duration-300 flex-shrink-0 ${
+              isOpen ? 'rotate-45' : 'rotate-0'
+            }`}
+            aria-hidden="true"
+          >
+            +
+          </span>
+        </button>
+      </h3>
       
       {/* Smooth height transition wrapper */}
       <div
+        id={`faq-panel-${index}`}
+        role="region"
+        aria-labelledby={`faq-btn-${index}`}
+        aria-hidden={!isOpen}
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 opacity-0'
         }`}
@@ -99,6 +110,7 @@ export default function Faq() {
               {faqs.map((faq, index) => (
                 <FaqItem
                   key={index}
+                  index={index}
                   question={faq.question}
                   answer={faq.answer}
                   isOpen={openIndex === index}
