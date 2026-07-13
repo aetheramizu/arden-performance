@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Reveal from './Reveal';
 
 interface FaqItemProps {
   question: string;
@@ -74,30 +75,38 @@ export default function Faq() {
           
           {/* Left Side Typography Summary */}
           <div className="lg:col-span-4 space-y-4">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
-              Support Console
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xs text-slateMuted font-light leading-relaxed max-w-sm">
-              Curious about clinical onboarding or membership protocols? Find quick details below. For direct
-              coordination, contact our support registrar.
-            </p>
+            <Reveal delay={0} direction="up" distance={20}>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
+                Support Console
+              </span>
+            </Reveal>
+            <Reveal delay={120} direction="up" distance={24}>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
+                Frequently Asked Questions
+              </h2>
+            </Reveal>
+            <Reveal delay={240} direction="up" distance={20}>
+              <p className="text-xs text-slateMuted font-light leading-relaxed max-w-sm">
+                Curious about clinical onboarding or membership protocols? Find quick details below. For direct
+                coordination, contact our support registrar.
+              </p>
+            </Reveal>
           </div>
 
           {/* Right Side Custom Accordion Group */}
-          <div className="lg:col-span-8 space-y-6">
-            {faqs.map((faq, index) => (
-              <FaqItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openIndex === index}
-                onToggle={() => handleToggle(index)}
-              />
-            ))}
-          </div>
+          <Reveal className="lg:col-span-8" delay={300} direction="up" distance={24}>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <FaqItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onToggle={() => handleToggle(index)}
+                />
+              ))}
+            </div>
+          </Reveal>
 
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Reveal from './Reveal';
 
 type TabId = 'metabolic' | 'circadian' | 'neurological' | 'musculoskeletal';
 
@@ -22,19 +23,25 @@ export default function DiagnosticPreview() {
           
           {/* Left Narrative Space */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 font-bold">
-              Biological Interface
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
-              Visualize your <br />biological index.
-            </h2>
-            <p className="text-mutedGray font-light text-xs md:text-sm leading-relaxed">
-              Below is a simulated window into the ARDEN digital gateway. Choose a core focus parameter to
-              preview the bespoke lifestyle architecture we design to regulate your biology.
-            </p>
+            <Reveal delay={0} direction="up" distance={20}>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 font-bold">
+                Biological Interface
+              </span>
+            </Reveal>
+            <Reveal delay={120} direction="up" distance={24}>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
+                Visualize your <br />biological index.
+              </h2>
+            </Reveal>
+            <Reveal delay={240} direction="up" distance={20}>
+              <p className="text-mutedGray font-light text-xs md:text-sm leading-relaxed">
+                Below is a simulated window into the ARDEN digital gateway. Choose a core focus parameter to
+                preview the bespoke lifestyle architecture we design to regulate your biology.
+              </p>
+            </Reveal>
 
             {/* Coaching Integrity Notice Box */}
-            <div className="pt-6 hidden lg:block">
+            <Reveal delay={360} direction="up" distance={16} className="pt-6 hidden lg:block">
               <div className="p-6 border border-white/[0.04] bg-[#141416]/40 space-y-2">
                 <span className="text-[10px] font-mono tracking-widest uppercase text-white">
                   Coaching Integrity Notice
@@ -44,11 +51,12 @@ export default function DiagnosticPreview() {
                   integrated with 1-on-1 supervision from elite physiological clinicians.
                 </p>
               </div>
-            </div>
+            </Reveal>
           </div>
 
           {/* Right Interactive Portal Component */}
-          <div className="lg:col-span-7 bg-[#141416] border border-white/[0.05] p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+          <Reveal className="lg:col-span-7" delay={200} direction="up" distance={30} duration={800}>
+            <div className="bg-[#141416] border border-white/[0.05] p-6 sm:p-12 shadow-2xl relative overflow-hidden">
             
             {/* App Interface Top Window Decor */}
             <div className="flex items-center justify-between border-b border-white/[0.05] pb-6 mb-8 flex-wrap gap-4">
@@ -219,7 +227,8 @@ export default function DiagnosticPreview() {
               </Link>
             </div>
 
-          </div>
+            </div>
+          </Reveal>
 
         </div>
       </div>

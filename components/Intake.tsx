@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Reveal from './Reveal';
 
 export default function Intake() {
   const [firstName, setFirstName] = useState('');
@@ -30,7 +31,7 @@ export default function Intake() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Left Side: Editorial Banner Frame */}
-          <div className="lg:col-span-5 relative group">
+          <Reveal className="lg:col-span-5 relative group" delay={0} direction="up" distance={40} duration={900}>
             <div className="relative aspect-[16/10] lg:aspect-[4/5] bg-zinc-900 overflow-hidden shadow-2xl">
               <img
                 src="/images/intake-consult.jpg"
@@ -50,10 +51,11 @@ export default function Intake() {
                 </p>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Side: Clean White Interactive Form Console */}
-          <div className="lg:col-span-7 bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.06] space-y-10">
+          <Reveal className="lg:col-span-7" delay={200} direction="up" distance={30} duration={800}>
+            <div className="bg-warmWhite text-obsidian p-8 sm:p-12 shadow-2xl border border-obsidian/[0.06] space-y-10">
             
             <div className="space-y-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
@@ -192,7 +194,8 @@ export default function Intake() {
               </div>
             )}
 
-          </div>
+            </div>
+          </Reveal>
 
         </div>
       </div>

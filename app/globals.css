@@ -23,6 +23,81 @@
   }
 }
 
+/* ──────────────────────────────────────────────
+   Smooth Scrolling
+   ────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ──────────────────────────────────────────────
+   Hero Entrance Keyframes
+   ────────────────────────────────────────────── */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-line-grow {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.hero-animate-tagline {
+  animation: hero-fade-up 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 200ms both;
+}
+
+.hero-animate-headline {
+  animation: hero-fade-up 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 450ms both;
+}
+
+.hero-animate-body {
+  animation: hero-fade-up 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 700ms both;
+}
+
+.hero-animate-cta {
+  animation: hero-fade-up 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 950ms both;
+}
+
+.hero-animate-stats {
+  animation: hero-fade-in 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 1100ms both;
+}
+
+/* ──────────────────────────────────────────────
+   Accessibility: Reduced Motion
+   ────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Custom Fine-Grain Texture Overlay for Lookbook Feel */
 .grain-overlay {
   position: fixed;
@@ -66,4 +141,3 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: #FFFFFF;
 }
-

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Reveal from './Reveal';
 
 export default function Exclusives() {
   return (
@@ -6,25 +7,29 @@ export default function Exclusives() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="mb-20">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-bold mb-4">
-            Unmatched Offerings
-          </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
-            New ARDEN Exclusives
-          </h2>
+          <Reveal delay={0} direction="up" distance={20}>
+            <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-bold mb-4">
+              Unmatched Offerings
+            </span>
+          </Reveal>
+          <Reveal delay={120} direction="up" distance={24}>
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
+              New ARDEN Exclusives
+            </h2>
+          </Reveal>
         </div>
 
         {/* Staggered Overlapping Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column: Composite Image and Floating Card */}
-          <div className="lg:col-span-7 relative">
+          <Reveal className="lg:col-span-7 relative" delay={0} direction="up" distance={40} duration={900}>
             {/* Base Image Wrapper */}
             <div className="aspect-[16/10] bg-zinc-900 overflow-hidden relative shadow-2xl z-0">
               <img
                 src="/images/exclusives-ride.jpg"
                 alt="Precision cardiovascular cycling session in a high-end architectural space"
-                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-1000 ease-out brightness-90"
+                className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-90"
                 loading="lazy"
               />
             </div>
@@ -50,33 +55,37 @@ export default function Exclusives() {
                 </Link>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Column: Portrait Card and Text Block */}
           <div className="lg:col-span-5 space-y-6 md:space-y-8 lg:pl-12">
             {/* Portrait Image Wrapper */}
-            <div className="aspect-[4/5] bg-zinc-900 overflow-hidden relative shadow-xl">
-              <img
-                src="/images/exclusives-sessions.jpg"
-                alt="Precision physical alignment and core skeletal training"
-                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-1000 ease-out brightness-95"
-                loading="lazy"
-              />
-            </div>
+            <Reveal delay={200} direction="up" distance={40} duration={900}>
+              <div className="aspect-[4/5] bg-zinc-900 overflow-hidden relative shadow-xl">
+                <img
+                  src="/images/exclusives-sessions.jpg"
+                  alt="Precision physical alignment and core skeletal training"
+                  className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-95"
+                  loading="lazy"
+                />
+              </div>
+            </Reveal>
 
             {/* Content Details */}
-            <div className="space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 block">
-                Private Calibration
-              </span>
-              <h3 className="font-serif text-xl md:text-2xl font-normal uppercase tracking-wide leading-tight text-warmWhite">
-                Unlimited Signature Sessions
-              </h3>
-              <p className="text-xs text-mutedGray font-light leading-relaxed">
-                Every program is calibrated dynamically. Enjoy private studio environments engineered for
-                uninterrupted, clinical-grade neurological and physical testing.
-              </p>
-            </div>
+            <Reveal delay={350} direction="up" distance={24}>
+              <div className="space-y-4">
+                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 block">
+                  Private Calibration
+                </span>
+                <h3 className="font-serif text-xl md:text-2xl font-normal uppercase tracking-wide leading-tight text-warmWhite">
+                  Unlimited Signature Sessions
+                </h3>
+                <p className="text-xs text-mutedGray font-light leading-relaxed">
+                  Every program is calibrated dynamically. Enjoy private studio environments engineered for
+                  uninterrupted, clinical-grade neurological and physical testing.
+                </p>
+              </div>
+            </Reveal>
           </div>
 
         </div>

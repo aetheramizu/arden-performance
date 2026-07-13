@@ -1,3 +1,5 @@
+import Reveal from './Reveal';
+
 export default function Retreats() {
   return (
     <section
@@ -8,7 +10,7 @@ export default function Retreats() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column: Image with Overlapping Location Badge */}
-          <div className="lg:col-span-7 relative">
+          <Reveal className="lg:col-span-7 relative" delay={0} direction="up" distance={40} duration={900}>
             <div className="absolute -inset-4 border border-obsidian/[0.03] pointer-events-none" aria-hidden="true" />
             
             {/* Image Wrapper */}
@@ -16,7 +18,7 @@ export default function Retreats() {
               <img
                 src="/images/retreat-lodge.jpg"
                 alt="The minimalist architectural mountain lodge design of ARDEN Retreat Chambers"
-                className="object-cover w-full h-full scale-100 hover:scale-105 transition-transform duration-1000 ease-out brightness-95"
+                className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-95"
                 loading="lazy"
               />
             </div>
@@ -42,38 +44,46 @@ export default function Retreats() {
                 An oxygen-regulated training and thermal retreat chamber nestled in Zermatt high altitudes.
               </p>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right Column: Editorial Text Content & Key Features */}
           <div className="lg:col-span-5 space-y-6 lg:pl-12">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
-              Physical Architecture
-            </span>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
-              ARDEN House: <br />
-              Your sensory <br />
-              <span className="italic font-light">decompression zone.</span>
-            </h2>
-            <p className="text-slateMuted font-light text-xs md:text-sm leading-relaxed">
-              Exclusivity isn&apos;t just digital. Membership provides secure, keyless passcodes to ARDEN
-              House—minimalist physical spaces built to allow modern professionals to train, test biomarkers,
-              reset cortisol, and recover in ultimate privacy.
-            </p>
+            <Reveal delay={100} direction="up" distance={20}>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
+                Physical Architecture
+              </span>
+            </Reveal>
+            <Reveal delay={200} direction="up" distance={24}>
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
+                ARDEN House: <br />
+                Your sensory <br />
+                <span className="italic font-light">decompression zone.</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={300} direction="up" distance={20}>
+              <p className="text-slateMuted font-light text-xs md:text-sm leading-relaxed">
+                Exclusivity isn&apos;t just digital. Membership provides secure, keyless passcodes to ARDEN
+                House—minimalist physical spaces built to allow modern professionals to train, test biomarkers,
+                reset cortisol, and recover in ultimate privacy.
+              </p>
+            </Reveal>
             
-            <ul className="space-y-3 text-xs text-slateDark font-light">
-              <li className="flex items-start space-x-3">
-                <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
-                <span>Full-spectrum hyperbaric oxygen therapy chambers.</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
-                <span>Thermal high-contrast zones designed by recovery architects.</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
-                <span>Acoustically engineered quiet focus work pods.</span>
-              </li>
-            </ul>
+            <Reveal delay={400} direction="up" distance={16}>
+              <ul className="space-y-3 text-xs text-slateDark font-light">
+                <li className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
+                  <span>Full-spectrum hyperbaric oxygen therapy chambers.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
+                  <span>Thermal high-contrast zones designed by recovery architects.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-none bg-black flex-shrink-0 mt-1.5" aria-hidden="true" />
+                  <span>Acoustically engineered quiet focus work pods.</span>
+                </li>
+              </ul>
+            </Reveal>
           </div>
 
         </div>

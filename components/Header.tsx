@@ -1,9 +1,27 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <header
-      className="fixed top-0 left-0 w-full z-50 bg-obsidian/90 backdrop-blur-md border-b border-white/[0.05] transition-colors duration-300"
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b transition-all duration-500 ease-out ${
+        scrolled
+          ? 'bg-obsidian/95 border-white/[0.06] shadow-[0_1px_20px_rgba(0,0,0,0.3)]'
+          : 'bg-obsidian/60 border-white/[0.03]'
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Brand Mark */}
@@ -47,7 +65,7 @@ export default function Header() {
         <div className="flex items-center space-x-6">
           <Link
             href="#apply"
-            className="relative group overflow-hidden px-6 py-3 md:px-5 md:py-2.5 border border-white/25 text-[10px] uppercase tracking-[0.2em] text-warmWhite rounded-none transition-colors duration-300 hover:border-warmWhite hover:bg-white/[0.05]"
+            className="relative group overflow-hidden px-6 py-3 md:px-5 md:py-2.5 border border-white/25 text-[10px] uppercase tracking-[0.2em] text-warmWhite rounded-none transition-all duration-300 hover:border-warmWhite hover:bg-white/[0.05] hover:shadow-[0_0_20px_rgba(255,255,255,0.06)]"
           >
             <span className="relative z-10">Request Membership</span>
           </Link>
