@@ -1,15 +1,18 @@
 import Reveal from './Reveal';
+import Section from './ui/Section';
+import Container from './ui/Container';
+import Eyebrow from './ui/Eyebrow';
 
 export default function PerformanceCategories() {
   return (
-    <section className="py-24 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-baseline">
+    <Section theme="warmWhite" borderBottom>
+      <Container className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-baseline">
         {/* Left Column: Section Title */}
         <div className="lg:col-span-4">
           <Reveal delay={0} direction="up" distance={20}>
-            <h2 className="text-[11px] uppercase tracking-[0.3em] text-obsidian font-bold">
+            <Eyebrow theme="light" className="mb-0">
               Performance Categories
-            </h2>
+            </Eyebrow>
           </Reveal>
         </div>
 
@@ -46,7 +49,7 @@ export default function PerformanceCategories() {
             </ul>
           </Reveal>
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

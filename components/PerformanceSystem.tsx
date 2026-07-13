@@ -1,4 +1,10 @@
 import Reveal from './Reveal';
+import Section from './ui/Section';
+import Container from './ui/Container';
+import Eyebrow from './ui/Eyebrow';
+import Heading from './ui/Heading';
+import Card from './ui/Card';
+import Text from './ui/Text';
 
 interface SystemCardProps {
   num: string;
@@ -12,7 +18,7 @@ interface SystemCardProps {
 function SystemCard({ num, title, description, imageSrc, imageAlt, index }: SystemCardProps) {
   return (
     <Reveal delay={index * 150} direction="up" distance={30} duration={700}>
-      <div className="bg-white border border-obsidian/[0.06] hover:border-obsidian/20 hover:-translate-y-1 hover:shadow-xl transition-all duration-500 ease-out overflow-hidden group">
+      <Card theme="white" hoverLift className="group">
         {/* Card Image Aspect Wrapper */}
         <div className="aspect-[16/10] overflow-hidden bg-zinc-100">
           <img
@@ -27,14 +33,14 @@ function SystemCard({ num, title, description, imageSrc, imageAlt, index }: Syst
 
         {/* Card Text Content */}
         <div className="p-8 space-y-4">
-          <h3 className="font-sans text-lg font-bold uppercase tracking-wider text-obsidian">
+          <Heading level={3} theme="light">
             {num} / {title}
-          </h3>
-          <p className="text-xs text-slateMuted font-light leading-relaxed">
+          </Heading>
+          <Text variant="body-sm" theme="light">
             {description}
-          </p>
+          </Text>
         </div>
-      </div>
+      </Card>
     </Reveal>
   );
 }
@@ -65,30 +71,27 @@ export default function PerformanceSystem() {
   ];
 
   return (
-    <section
-      id="system"
-      className="py-20 md:py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <Section id="system" theme="warmWhite" borderBottom>
+      <Container>
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
           <div className="lg:col-span-5">
             <Reveal delay={0} direction="up" distance={20}>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 block mb-4 font-bold">
+              <Eyebrow theme="light">
                 Precision Analytics
-              </span>
+              </Eyebrow>
             </Reveal>
             <Reveal delay={120} direction="up" distance={24}>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
+              <Heading level={2} theme="light">
                 The ARDEN <br />Performance Ecosystem
-              </h2>
+              </Heading>
             </Reveal>
           </div>
           <Reveal className="lg:col-span-7" delay={200} direction="up" distance={20}>
-            <p className="text-slateDark font-light text-sm md:text-base leading-relaxed max-w-xl">
+            <Text variant="body" theme="light" className="max-w-xl">
               By integrating dynamic physiological trackers with clinical biomarkers and bespoke nutrition
               schedules, ARDEN constructs an optimized, continuous feedback loop for your daily routine.
-            </p>
+            </Text>
           </Reveal>
         </div>
 
@@ -98,7 +101,7 @@ export default function PerformanceSystem() {
             <SystemCard key={card.num} {...card} index={index} />
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

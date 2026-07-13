@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Container from './ui/Container';
+import Button from './ui/Button';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +32,7 @@ export default function Header() {
       >
         Skip to main content
       </a>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      <Container className="h-20 flex items-center justify-between">
         {/* Brand Mark */}
         <Link
           href="#"
@@ -70,14 +72,15 @@ export default function Header() {
 
         {/* Premium CTA Button */}
         <div className="flex items-center space-x-6">
-          <Link
+          <Button
+            variant="outline"
             href="#apply"
-            className="relative group overflow-hidden px-6 py-3 md:px-5 md:py-2.5 border border-white/25 text-[10px] uppercase tracking-[0.2em] text-warmWhite rounded-none transition-all duration-300 hover:border-warmWhite hover:bg-white/[0.05] hover:shadow-[0_0_20px_rgba(255,255,255,0.06)]"
+            className="relative group overflow-hidden"
           >
             <span className="relative z-10">Request Membership</span>
-          </Link>
+          </Button>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }

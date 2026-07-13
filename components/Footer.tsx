@@ -1,31 +1,34 @@
 import Link from 'next/link';
 import Reveal from './Reveal';
+import Container from './ui/Container';
+import Heading from './ui/Heading';
+import Text from './ui/Text';
 
 export default function Footer() {
   return (
     <footer className="py-24 bg-obsidian text-warmWhite border-t border-white/[0.05]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+      <Container className="space-y-16">
         
         <Reveal delay={0} direction="up" distance={20} duration={800}>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
           
             {/* Branding coordinates */}
             <div className="space-y-4">
-              <span className="font-serif text-2xl uppercase tracking-wider text-warmWhite">
+              <Heading level={2} className="text-2xl tracking-wider">
                 ARDEN
-              </span>
-              <p className="text-[10px] text-mutedGray font-mono tracking-wider">
+              </Heading>
+              <Text variant="mono-xs">
                 EST. 2026 // BIOMETRIC SYSTEMS
                 <br />
                 ZERMATT // TOKYO // NYC
-              </p>
+              </Text>
             </div>
 
             {/* Links 1 */}
             <div className="space-y-3">
-              <h5 className="text-[10px] font-mono tracking-widest uppercase text-white font-bold">
+              <Heading level={3} className="text-[10px] font-mono tracking-widest">
                 Programs
-              </h5>
+              </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
                   <Link href="#exclusives" className="hover:text-white transition-colors duration-200">
@@ -47,9 +50,9 @@ export default function Footer() {
 
             {/* Links 2 */}
             <div className="space-y-3">
-              <h5 className="text-[10px] font-mono tracking-widest uppercase text-white font-bold">
+              <Heading level={3} className="text-[10px] font-mono tracking-widest">
                 Retreats
-              </h5>
+              </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
                   <Link href="#retreats" className="hover:text-white transition-colors duration-200">
@@ -71,9 +74,9 @@ export default function Footer() {
 
             {/* Intake coords */}
             <div className="space-y-3">
-              <h5 className="text-[10px] font-mono tracking-widest uppercase text-white font-bold">
+              <Heading level={3} className="text-[10px] font-mono tracking-widest">
                 Application
-              </h5>
+              </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
                   <Link href="#apply" className="hover:text-white transition-colors duration-200">
@@ -109,7 +112,7 @@ export default function Footer() {
           </div>
         </Reveal>
 
-      </div>
+      </Container>
     </footer>
   );
 }

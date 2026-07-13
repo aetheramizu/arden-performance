@@ -1,5 +1,9 @@
-import Link from 'next/link';
 import VideoBackground from './VideoBackground';
+import Container from './ui/Container';
+import Eyebrow from './ui/Eyebrow';
+import Heading from './ui/Heading';
+import Text from './ui/Text';
+import Button from './ui/Button';
 
 export default function Hero() {
   return (
@@ -11,69 +15,71 @@ export default function Hero() {
       />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full my-auto pt-32 pb-8 md:pt-44 md:pb-12 flex flex-col items-start space-y-12">
+      <Container className="relative z-10 my-auto pt-32 pb-8 md:pt-44 md:pb-12 flex flex-col items-start space-y-12">
         <div className="space-y-4 max-w-5xl">
           {/* Tiny Brand Tagline */}
           <div className="flex items-center space-x-3 text-white hero-animate-tagline">
             <span className="w-1.5 h-1.5 bg-white block rounded-none" aria-hidden="true" />
-            <span className="text-xs uppercase tracking-[0.35em] font-medium">
+            <Eyebrow theme="dark" className="mb-0">
               Human Architecture for Professionals
-            </span>
+            </Eyebrow>
           </div>
 
           {/* Huge Immersive Headline */}
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl font-normal leading-[1.08] tracking-tight uppercase text-warmWhite hero-animate-headline">
+          <Heading level={1} className="hero-animate-headline">
             Designed for the individual.<br />
             <span className="italic font-light lowercase tracking-normal">powered by</span> the collective.
-          </h1>
+          </Heading>
         </div>
 
         {/* Description & Call to Action */}
         <div className="space-y-8 max-w-xl">
-          <p className="text-mutedGray text-base md:text-lg font-light leading-relaxed hero-animate-body">
+          <Text variant="body-lg" className="hero-animate-body">
             Signature health programs, clinical diagnostics, and high-touch physiological coaching engineered to
             drive results. Reserved exclusively for elite performance.
-          </p>
+          </Text>
 
           <div className="hero-animate-cta">
-            <Link
+            <Button
+              variant="filled"
+              theme="dark"
               href="#apply"
-              className="inline-block bg-warmWhite text-obsidian text-xs uppercase tracking-[0.25em] font-bold py-4 px-10 hover:bg-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+              className="hover:shadow-lg hover:-translate-y-0.5"
             >
               Learn More
-            </Link>
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
 
       {/* Sticky Coordinate Stats (Hero Footer) */}
       <div className="relative z-10 w-full border-t border-white/[0.05] bg-obsidian/90 backdrop-blur-sm hero-animate-stats">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-xs text-mutedGray">
+        <Container className="py-8 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-xs text-mutedGray">
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
+            <Heading level={3} className="text-[10px] font-mono tracking-widest text-warmWhite">
               01 / STRENGTH PROTOCOLS
-            </span>
-            <p className="font-light text-mutedGray">Skeletal integrity & dense resistance.</p>
+            </Heading>
+            <Text variant="body-sm">Skeletal integrity & dense resistance.</Text>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
+            <Heading level={3} className="text-[10px] font-mono tracking-widest text-warmWhite">
               02 / METABOLIC SYSTEMS
-            </span>
-            <p className="font-light text-mutedGray">Sub-cellular glycemic tracking.</p>
+            </Heading>
+            <Text variant="body-sm">Sub-cellular glycemic tracking.</Text>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
+            <Heading level={3} className="text-[10px] font-mono tracking-widest text-warmWhite">
               03 / CIRCADIAN BLUEPRINTS
-            </span>
-            <p className="font-light text-mutedGray">Optimized deep autonomic sleep.</p>
+            </Heading>
+            <Text variant="body-sm">Optimized deep autonomic sleep.</Text>
           </div>
           <div className="space-y-1">
-            <span className="text-warmWhite font-bold block text-[10px] uppercase tracking-[0.2em]">
+            <Heading level={3} className="text-[10px] font-mono tracking-widest text-warmWhite">
               04 / THE PHYSICAL CHAMBERS
-            </span>
-            <p className="font-light text-mutedGray">Sensory decompression retreats.</p>
+            </Heading>
+            <Text variant="body-sm">Sensory decompression retreats.</Text>
           </div>
-        </div>
+        </Container>
       </div>
     </section>
   );

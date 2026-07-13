@@ -1,21 +1,27 @@
-import Link from 'next/link';
 import Reveal from './Reveal';
+import Section from './ui/Section';
+import Container from './ui/Container';
+import Eyebrow from './ui/Eyebrow';
+import Heading from './ui/Heading';
+import Card from './ui/Card';
+import Text from './ui/Text';
+import Button from './ui/Button';
 
 export default function Exclusives() {
   return (
-    <section id="exclusives" className="py-20 md:py-32 bg-obsidian border-b border-white/[0.05]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <Section id="exclusives" borderBottom>
+      <Container>
         {/* Section Header */}
         <div className="mb-20">
           <Reveal delay={0} direction="up" distance={20}>
-            <span className="text-[11px] uppercase tracking-[0.3em] text-white/50 block font-bold mb-4">
+            <Eyebrow theme="dark">
               Unmatched Offerings
-            </span>
+            </Eyebrow>
           </Reveal>
           <Reveal delay={120} direction="up" distance={24}>
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-warmWhite leading-[1.1]">
+            <Heading level={2}>
               New ARDEN Exclusives
-            </h2>
+            </Heading>
           </Reveal>
         </div>
 
@@ -37,26 +43,30 @@ export default function Exclusives() {
             </div>
 
             {/* Floating Luxury Info Card */}
-            <div className="mt-6 lg:mt-0 lg:absolute lg:-bottom-12 lg:-right-6 bg-warmWhite text-obsidian p-8 md:p-12 max-w-md shadow-2xl z-10 space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-obsidian/40 block">
+            <Card
+              theme="white"
+              className="mt-6 lg:mt-0 lg:absolute lg:-bottom-12 lg:-right-6 p-8 md:p-12 max-w-md shadow-2xl z-10 space-y-4"
+            >
+              <Eyebrow theme="light" className="mb-0 text-[10px]">
                 Exclusive Launch
-              </span>
-              <h3 className="font-serif text-xl md:text-2xl font-normal uppercase tracking-wide leading-tight text-obsidian">
+              </Eyebrow>
+              <Heading level={3} className="text-xl md:text-2xl font-light">
                 PRECISION RIDE™
-              </h3>
-              <p className="text-xs text-obsidian/75 font-light leading-relaxed">
+              </Heading>
+              <Text variant="body-sm" theme="light">
                 A performance-driven cardiovascular assessment model that utilizes localized biometric
                 telemetry to optimize oxygen ceiling limits and personal metabolic thresholds.
-              </p>
+              </Text>
               <div className="pt-2">
-                <Link
+                <Button
+                  variant="underline"
+                  theme="light"
                   href="#apply"
-                  className="text-xs uppercase tracking-[0.2em] font-semibold border-b border-obsidian pb-1 hover:text-black hover:border-black transition-colors duration-200"
                 >
                   Request Access &rarr;
-                </Link>
+                </Button>
               </div>
-            </div>
+            </Card>
           </Reveal>
 
           {/* Right Column: Portrait Card and Text Block */}
@@ -78,22 +88,22 @@ export default function Exclusives() {
             {/* Content Details */}
             <Reveal delay={350} direction="up" distance={24}>
               <div className="space-y-4">
-                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/40 block">
+                <Eyebrow theme="dark" className="text-[10px]">
                   Private Calibration
-                </span>
-                <h3 className="font-serif text-xl md:text-2xl font-normal uppercase tracking-wide leading-tight text-warmWhite">
+                </Eyebrow>
+                <Heading level={3} className="text-xl md:text-2xl font-light">
                   Unlimited Signature Sessions
-                </h3>
-                <p className="text-xs text-mutedGray font-light leading-relaxed">
+                </Heading>
+                <Text variant="body-sm" theme="dark">
                   Every program is calibrated dynamically. Enjoy private studio environments engineered for
                   uninterrupted, clinical-grade neurological and physical testing.
-                </p>
+                </Text>
               </div>
             </Reveal>
           </div>
 
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

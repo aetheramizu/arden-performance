@@ -2,6 +2,11 @@
 
 import { useState } from 'react';
 import Reveal from './Reveal';
+import Section from './ui/Section';
+import Container from './ui/Container';
+import Eyebrow from './ui/Eyebrow';
+import Heading from './ui/Heading';
+import Text from './ui/Text';
 
 interface FaqItemProps {
   question: string;
@@ -46,9 +51,9 @@ function FaqItem({ question, answer, isOpen, onToggle, index }: FaqItemProps) {
           isOpen ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-xs text-slateMuted font-light leading-relaxed max-w-2xl">
+        <Text variant="body-sm" theme="light" className="max-w-2xl">
           {answer}
-        </p>
+        </Text>
       </div>
     </div>
   );
@@ -77,30 +82,27 @@ export default function Faq() {
   };
 
   return (
-    <section
-      id="faq"
-      className="py-20 md:py-32 bg-warmWhite text-obsidian border-b border-obsidian/[0.06] transition-colors duration-500"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <Section id="faq" theme="warmWhite" borderBottom>
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Left Side Typography Summary */}
           <div className="lg:col-span-4 space-y-4">
             <Reveal delay={0} direction="up" distance={20}>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-obsidian/50 font-bold">
+              <Eyebrow theme="light">
                 Support Console
-              </span>
+              </Eyebrow>
             </Reveal>
             <Reveal delay={120} direction="up" distance={24}>
-              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal text-obsidian leading-[1.1]">
+              <Heading level={2} theme="light">
                 Frequently Asked Questions
-              </h2>
+              </Heading>
             </Reveal>
             <Reveal delay={240} direction="up" distance={20}>
-              <p className="text-xs text-slateMuted font-light leading-relaxed max-w-sm">
+              <Text variant="body-sm" theme="light" className="max-w-sm">
                 Curious about clinical onboarding or membership protocols? Find quick details below. For direct
                 coordination, contact our support registrar.
-              </p>
+              </Text>
             </Reveal>
           </div>
 
@@ -121,7 +123,7 @@ export default function Faq() {
           </Reveal>
 
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
