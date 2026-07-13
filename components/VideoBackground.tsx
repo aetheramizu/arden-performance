@@ -9,15 +9,17 @@ interface VideoBackgroundProps {
 
 export default function VideoBackground({ videoSrc, posterSrc }: VideoBackgroundProps) {
   const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // default to true on server to avoid mobile video fetch
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     setIsMounted(true);
+    setIsMobile(window.innerWidth < 768);
   }, []);
 
   useEffect(() => {
-    if (!isMounted || !videoRef.current) return;
+    if (!isMounted || isMobile || !videoRef.current) return;
 
     const videoEl = videoRef.current;
 
@@ -40,15 +42,17 @@ export default function VideoBackground({ videoSrc, posterSrc }: VideoBackground
     return () => {
       observer.unobserve(videoEl);
     };
-  }, [isMounted]);
+  }, [isMounted, isMobile]);
 
-  // SSR state rendering static poster placeholder
-  if (!isMounted) {
+  // SSR or mobile states rendering static poster placeholder (bypasses video tag instantiation)
+  if (!isMounted || isMobile) {
     return (
-      <div className="absolute inset-0 z-0 bg-obsidian" aria-hidden="true">
+      <div className="absolute inset-0 z-0 bg-obsidian overflow-hidden" aria-hidden="true">
         <img
           src={posterSrc}
           alt="Dawn performance preparation background poster"
+          width={1920}
+          height={1080}
           className="object-cover w-full h-full brightness-[0.35] contrast-[1.02]"
           loading="eager"
         />
@@ -63,6 +67,8 @@ export default function VideoBackground({ videoSrc, posterSrc }: VideoBackground
       <img
         src={posterSrc}
         alt="Dawn performance preparation background poster"
+        width={1920}
+        height={1080}
         className={`absolute inset-0 object-cover w-full h-full brightness-[0.35] contrast-[1.02] transition-opacity duration-1000 ${
           videoLoaded ? 'opacity-0' : 'opacity-100'
         }`}

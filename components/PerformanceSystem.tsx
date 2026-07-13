@@ -18,6 +18,8 @@ function SystemCard({ num, title, description, imageSrc, imageAlt, index }: Syst
           <img
             src={imageSrc}
             alt={imageAlt}
+            width={600}
+            height={375}
             className="object-cover w-full h-full brightness-95 group-hover:scale-[1.03] transition-transform duration-700 ease-out"
             loading="lazy"
           />

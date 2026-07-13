@@ -29,6 +29,8 @@ export default function Exclusives() {
               <img
                 src="/images/exclusives-ride.jpg"
                 alt="Precision cardiovascular cycling session in a high-end architectural space"
+                width={800}
+                height={500}
                 className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-90"
                 loading="lazy"
               />
@@ -65,6 +67,8 @@ export default function Exclusives() {
                 <img
                   src="/images/exclusives-sessions.jpg"
                   alt="Precision physical alignment and core skeletal training"
+                  width={600}
+                  height={750}
                   className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-95"
                   loading="lazy"
                 />

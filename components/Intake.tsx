@@ -36,6 +36,8 @@ export default function Intake() {
               <img
                 src="/images/intake-consult.jpg"
                 alt="Curated wellness clinic interior for direct physiological consultation"
+                width={800}
+                height={1000}
                 className="object-cover w-full h-full scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.45] contrast-[1.05]"
                 loading="lazy"
               />

@@ -18,6 +18,8 @@ export default function Retreats() {
               <img
                 src="/images/retreat-lodge.jpg"
                 alt="The minimalist architectural mountain lodge design of ARDEN Retreat Chambers"
+                width={800}
+                height={500}
                 className="object-cover w-full h-full scale-100 hover:scale-[1.03] transition-transform duration-1000 ease-out brightness-95"
                 loading="lazy"
               />
