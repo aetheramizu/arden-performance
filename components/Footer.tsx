@@ -84,8 +84,13 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#faq" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#faq" className="hover:text-white transition-colors duration-200">
                     Support Console
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-white transition-colors duration-200">
+                    Registrar Contact
                   </Link>
                 </li>
               </ul>

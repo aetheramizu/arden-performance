@@ -68,6 +68,12 @@ export default function Header() {
           >
             Retreat Chambers
           </Link>
+          <Link
+            href="/contact"
+            className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Premium CTA Button */}
