@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://arden-performance.com'),
   title: "ARDEN — Human Performance for Modern Professionals",
   description: "Clinical biological systems engineered to preserve healthspan, focus, and structural resilience for the world's elite performers.",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   alternates: {
     canonical: '/',
   },

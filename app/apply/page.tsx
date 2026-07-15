@@ -102,7 +102,7 @@ export default function ApplyPage() {
                 <Reveal key={item.step} delay={index * 150} direction="up" distance={30}>
                   <div className="space-y-4">
                     <span className="font-mono text-xs text-obsidian/30 block border-b border-obsidian/10 pb-2">
-                      {item.step} // STAGE
+                      {item.step} {"// STAGE"}
                     </span>
                     <Heading level={3} theme="light">
                       {item.title}

@@ -7,7 +7,6 @@ import Container from '@/components/ui/Container';
 import Eyebrow from '@/components/ui/Eyebrow';
 import Heading from '@/components/ui/Heading';
 import Text from '@/components/ui/Text';
-import Card from '@/components/ui/Card';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
@@ -97,7 +96,7 @@ export default function ContactPage() {
                 <Reveal key={hub.city} delay={index * 150} direction="up" distance={30}>
                   <div className="space-y-4">
                     <span className="font-mono text-xs text-obsidian/30 block border-b border-obsidian/10 pb-2">
-                      {hub.city} // {hub.coords}
+                      {hub.city} {"//"} {hub.coords}
                     </span>
                     <Heading level={3} theme="light">
                       {hub.title}
