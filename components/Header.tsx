@@ -45,25 +45,25 @@ export default function Header() {
         {/* Editorial Nav Links */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-12" aria-label="Main Navigation">
           <Link
-            href="#exclusives"
+            href="/#exclusives"
             className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
           >
             The Exclusives
           </Link>
           <Link
-            href="#system"
+            href="/#system"
             className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
           >
             The System
           </Link>
           <Link
-            href="#diagnostic"
+            href="/#diagnostic"
             className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
           >
             Diagnostics
           </Link>
           <Link
-            href="#retreats"
+            href="/#retreats"
             className="text-[10px] uppercase tracking-[0.2em] text-mutedGray hover:text-warmWhite transition-colors duration-200"
           >
             Retreat Chambers
@@ -74,7 +74,7 @@ export default function Header() {
         <div className="flex items-center space-x-6">
           <Button
             variant="outline"
-            href="#apply"
+            href="/apply"
             className="relative group overflow-hidden"
           >
             <span className="relative z-10">Request Membership</span>

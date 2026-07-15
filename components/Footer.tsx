@@ -31,17 +31,17 @@ export default function Footer() {
               </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
-                  <Link href="#exclusives" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#exclusives" className="hover:text-white transition-colors duration-200">
                     Precision Ride
                   </Link>
                 </li>
                 <li>
-                  <Link href="#exclusives" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#exclusives" className="hover:text-white transition-colors duration-200">
                     Signature Sessions
                   </Link>
                 </li>
                 <li>
-                  <Link href="#system" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#system" className="hover:text-white transition-colors duration-200">
                     Diagnostics
                   </Link>
                 </li>
@@ -55,17 +55,17 @@ export default function Footer() {
               </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
-                  <Link href="#retreats" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#retreats" className="hover:text-white transition-colors duration-200">
                     Alpine Lodge
                   </Link>
                 </li>
                 <li>
-                  <Link href="#retreats" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#retreats" className="hover:text-white transition-colors duration-200">
                     Thermal Zones
                   </Link>
                 </li>
                 <li>
-                  <Link href="#retreats" className="hover:text-white transition-colors duration-200">
+                  <Link href="/#retreats" className="hover:text-white transition-colors duration-200">
                     Decompression
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ export default function Footer() {
               </Heading>
               <ul className="space-y-1 text-xs text-mutedGray font-light">
                 <li>
-                  <Link href="#apply" className="hover:text-white transition-colors duration-200">
+                  <Link href="/apply" className="hover:text-white transition-colors duration-200">
                     Apply Online
                   </Link>
                 </li>
